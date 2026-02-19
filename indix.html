@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Qendah - Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #ecf0f1;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: -20px;
+            border-radius: 8px;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .job, .education-item, .project {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-header, .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            margin: 0;
+            color: var(--secondary-color);
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .organization {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            margin-top: 0.5rem;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mohamed Qendah</h1>
+        <p>Machine Learning Engineer & Data Specialist</p>
+        <div class="contact-info">
+            Turin, Italy | +39 347 341 2181 | <a href="mailto:mashq20.4.2@gmail.com">mashq20.4.2@gmail.com</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>Machine Learning Engineer and Data Specialist with a focus on AI for Healthcare. Currently pursuing an MS in AI for Biomedicine, combining academic grounding in Deep Learning and Neural Networks with practical experience in fine-tuning Generative AI models. Proven track record in humanitarian healthcare sectors (MdM, PRCS) managing large-scale medical datasets, building ETL pipelines, and utilizing Docker for deployment. Passionate about applying AI to solve complex medical challenges.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>Gen AI Intern</h3>
+                    <span class="date">12/2024 - 03/2025</span>
+                </div>
+                <div class="organization">Capital Placement (Remote)</div>
+                <ul>
+                    <li>Fine-tuned generative AI modules using Microsoft Azure to optimize model performance.</li>
+                    <li>Automated data extraction, cleaning, and uploading pipelines using Python.</li>
+                    <li>Trained and tested models to evaluate performance metrics and improve output quality.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>MEAL Officer</h3>
+                    <span class="date">04/2024 - 11/2025</span>
+                </div>
+                <div class="organization">Médecins du Monde | Bethlehem, Palestine</div>
+                <ul>
+                    <li>Managed and analyzed large-scale medical records and healthcare transactional data for operations across the West Bank and Gaza.</li>
+                    <li>Conducted rigorous data cleaning and validation on healthcare datasets to ensure data integrity.</li>
+                    <li>Facilitated capacity building workshops and supported staff training on digital MEAL tools.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>Data Analyst</h3>
+                    <span class="date">05/2023 - 04/2024</span>
+                </div>
+                <div class="organization">Palestine Red Crescent Society | Ramallah, Palestine</div>
+                <ul>
+                    <li>Designed and implemented ETL processes to streamline patient data, reducing processing time by 50%.</li>
+                    <li>Utilized Docker to containerize data applications, ensuring consistent deployment environments.</li>
+                    <li>Performed advanced SQL queries for data extraction and transformation to support departmental decision-making.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>MS in Artificial Intelligence for Biomedicine and Healthcare</h3>
+                    <span class="date">10/2025 - Current</span>
+                </div>
+                <div class="organization">University of Turin, Italy</div>
+                <p><strong>Key Modules:</strong> Machine Learning, Deep Learning, Neural Networks.</p>
+            </div>
+
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>BSc in Computer Science</h3>
+                    <span class="date">08/2018 - 09/2022</span>
+                </div>
+                <div class="organization">Birzeit University, Palestine</div>
+                <p><strong>Key Modules:</strong> Python Programming, Database Management, Artificial Intelligence, Statistics and Probability.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Project Experience</h2>
+            
+            <div class="project">
+                <div class="job-header">
+                    <h3>Plant Diseases Detection (Deep Learning)</h3>
+                    <span class="date">08/2023</span>
+                </div>
+                <p>Improved model accuracy from 98% to 99.8% using advanced data augmentation and preprocessing techniques.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Tools & Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Jupyter Notebook</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Microsoft Azure</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Deep Learning</span>
+            </div>
+            <p style="margin-top: 15px;"><strong>Languages:</strong> Arabic (Native), English (Fluent)</p>
+        </section>
+    </div>
+
+</body>
+</html>
