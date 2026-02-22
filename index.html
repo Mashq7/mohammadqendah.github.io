@@ -1,248 +1,466 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="RN-fj0_djIrMnjn7N66nqeID5d1AsTiDgruUKTRcDG8" />    
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="RN-fj0_djIrMnjn7N66nqeID5d1AsTiDgruUKTRcDG8" />  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Qendah - Portfolio</title>
-    <meta name="description" content="Professional portfolio of Mohamed Qendah, a Machine Learning Engineer and Data Specialist focused on AI for Biomedicine and Healthcare based in Turin, Italy.">
-    <meta name="keywords" content="Mohamed Qendah, Machine Learning Engineer, Data Analyst, AI Healthcare, Python, Data Science, Portfolio">
+    <title>Mohamed Qendah | AI & Data Specialist</title>
+    <meta name="description" content="Portfolio of Mohamed Qendah, Machine Learning Engineer focused on AI for Biomedicine.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-color: #f8f9fa;
+            --primary-bg: #f8fafc;
+            --secondary-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-blue: #0f172a;
+            --accent-teal: #0d9488;
+            --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
 
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            color: #ecf0f1;
-        }
-
-        .contact-info {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
-            margin: 0 10px;
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem;
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: -20px;
-            border-radius: 8px;
+            padding: 0 20px;
         }
 
-        section {
-            margin-bottom: 2.5rem;
+        /* --- Navbar --- */
+        nav {
+            background-color: var(--secondary-bg);
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .job, .education-item, .project {
-            margin-bottom: 1.5rem;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-decoration: none;
         }
 
-        .job-header, .edu-header {
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-teal);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 0;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--accent-blue);
+        }
+
+        .hero-text h1 span {
+            color: var(--accent-teal);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin-right: 20px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-teal);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--secondary-bg);
+            box-shadow: var(--card-shadow);
+        }
+
+        /* --- Section Titles --- */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 40px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-teal);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- Projects Section --- */
+        .projects {
+            padding: 80px 0;
+            background-color: var(--secondary-bg);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--primary-bg);
+            border-radius: 12px;
+            padding: 30px;
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            color: var(--accent-teal);
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background-color: #e2e8f0;
+            color: var(--text-main);
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-github:hover {
+            background-color: var(--accent-teal);
+        }
+
+        /* --- Experience & Education --- */
+        .timeline-section {
+            padding: 80px 0;
+        }
+
+        .timeline-item {
+            background-color: var(--secondary-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-teal);
+        }
+
+        .timeline-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.5rem;
-        }
-
-        h3 {
-            margin: 0;
-            color: var(--secondary-color);
-        }
-
-        .date {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-
-        .organization {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 0.5rem;
-        }
-
-        ul {
-            margin-top: 0.5rem;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .skills-container {
-            display: flex;
+            margin-bottom: 10px;
             flex-wrap: wrap;
-            gap: 10px;
         }
 
-        .skill-tag {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
+        .timeline-title {
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+        }
+
+        .timeline-org {
+            font-weight: 600;
+            color: var(--accent-teal);
+            margin-bottom: 15px;
+        }
+
+        .timeline-date {
+            color: var(--text-muted);
             font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .timeline-item ul {
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        .timeline-item li {
+            margin-bottom: 8px;
+        }
+
+        /* --- Contact Footer --- */
+        footer {
+            background-color: var(--accent-blue);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-info span, .footer-info a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Mohamed Qendah</h1>
-        <p>Machine Learning Engineer & Data Specialist</p>
-        <div class="contact-info">
-            Turin, Italy | +39 347 341 2181 | <a href="mailto:mashq20.4.2@gmail.com">mashq20.4.2@gmail.com</a>
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">MQ.</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container hero" id="about">
+        <div class="hero-text">
+            <h1>Hi, I'm <span>Mohamed Qendah</span></h1>
+            <p>Machine Learning Engineer and Data Specialist focused on AI for Biomedicine and Healthcare. I build models that extract meaningful insights from large-scale medical datasets to solve complex real-world challenges.</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/mohammadqendah" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:mashq20.4.2@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Mohamed Qendah Profile Picture" onerror="this.src='https://ui-avatars.com/api/?name=Mohamed+Qendah&size=350&background=0d9488&color=fff'">
         </div>
     </header>
 
-    <div class="container">
-        <section id="summary">
-            <h2>Professional Summary</h2>
-            <p>Machine Learning Engineer and Data Specialist with a focus on AI for Healthcare. Currently pursuing an MS in AI for Biomedicine, combining academic grounding in Deep Learning and Neural Networks with practical experience in fine-tuning Generative AI models. Proven track record in humanitarian healthcare sectors (MdM, PRCS) managing large-scale medical datasets, building ETL pipelines, and utilizing Docker for deployment. Passionate about applying AI to solve complex medical challenges.</p>
-        </section>
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <i class="fas fa-leaf project-icon"></i>
+                    <h3 class="project-title">Plant Diseases Detection</h3>
+                    <p class="project-desc">A deep learning model designed to identify plant diseases from images. Improved model accuracy from 98% to 99.8% using advanced data augmentation and preprocessing techniques.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Data Augmentation</span>
+                    </div>
+                    <a href="#" class="btn-github" target="_blank"><i class="fab fa-github"></i> View Source</a>
+                </div>
 
-        <section id="experience">
-            <h2>Work Experience</h2>
+                <div class="project-card">
+                    <i class="fas fa-database project-icon"></i>
+                    <h3 class="project-title">Healthcare Data ETL Pipeline</h3>
+                    <p class="project-desc">Designed and implemented an automated ETL pipeline using Docker to streamline patient data extraction and cleaning, significantly reducing data processing times.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <a href="#" class="btn-github" target="_blank"><i class="fab fa-github"></i> View Source</a>
+                </div>
+
+                <div class="project-card">
+                    <i class="fas fa-robot project-icon"></i>
+                    <h3 class="project-title">Generative AI Fine-Tuning</h3>
+                    <p class="project-desc">Fine-tuned generative AI modules to optimize output performance and quality metrics, managing automated data extraction and cleaning workflows.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Microsoft Azure</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">Gen AI</span>
+                    </div>
+                    <a href="#" class="btn-github" target="_blank"><i class="fab fa-github"></i> View Source</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container timeline-section" id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Gen AI Intern</h3>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 12/2024 - 03/2025</span>
+            </div>
+            <div class="timeline-org">Capital Placement (Remote)</div>
+            <ul>
+                <li>Fine-tuned generative AI modules using Microsoft Azure to optimize model performance.</li>
+                <li>Automated data extraction, cleaning, and uploading pipelines using Python.</li>
+                <li>Trained and tested models to evaluate performance metrics and improve output quality.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">MEAL Officer</h3>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 04/2024 - 11/2025</span>
+            </div>
+            <div class="timeline-org">Médecins du Monde | Bethlehem, Palestine</div>
+            <ul>
+                <li>Managed and analyzed large-scale medical records and healthcare transactional data for operations across the West Bank and Gaza.</li>
+                <li>Conducted rigorous data cleaning and validation on healthcare datasets to ensure data integrity.</li>
+                <li>Facilitated capacity building workshops and supported staff training on digital MEAL tools.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Data Analyst</h3>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 05/2023 - 04/2024</span>
+            </div>
+            <div class="timeline-org">Palestine Red Crescent Society | Ramallah, Palestine</div>
+            <ul>
+                <li>Designed and implemented ETL processes to streamline patient data, reducing processing time by 50%.</li>
+                <li>Utilized Docker to containerize data applications, ensuring consistent deployment environments.</li>
+                <li>Performed advanced SQL queries for data extraction and transformation to support departmental decision-making.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="projects" style="background-color: var(--primary-bg);">
+        <div class="container timeline-section" style="padding: 0;">
+            <h2 class="section-title">Education</h2>
             
-            <div class="job">
-                <div class="job-header">
-                    <h3>Gen AI Intern</h3>
-                    <span class="date">12/2024 - 03/2025</span>
+            <div class="timeline-item" style="border-left-color: var(--accent-blue);">
+                <div class="timeline-header">
+                    <h3 class="timeline-title">MS in Artificial Intelligence for Biomedicine and Healthcare</h3>
+                    <span class="timeline-date">10/2025 - Current</span>
                 </div>
-                <div class="organization">Capital Placement (Remote)</div>
-                <ul>
-                    <li>Fine-tuned generative AI modules using Microsoft Azure to optimize model performance.</li>
-                    <li>Automated data extraction, cleaning, and uploading pipelines using Python.</li>
-                    <li>Trained and tested models to evaluate performance metrics and improve output quality.</li>
-                </ul>
+                <div class="timeline-org">University of Turin, Italy</div>
+                <p style="color: var(--text-muted);"><strong>Key Modules:</strong> Machine Learning, Deep Learning, Neural Networks.</p>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <h3>MEAL Officer</h3>
-                    <span class="date">04/2024 - 11/2025</span>
+            <div class="timeline-item" style="border-left-color: var(--accent-blue);">
+                <div class="timeline-header">
+                    <h3 class="timeline-title">BSc in Computer Science</h3>
+                    <span class="timeline-date">08/2018 - 09/2022</span>
                 </div>
-                <div class="organization">Médecins du Monde | Bethlehem, Palestine</div>
-                <ul>
-                    <li>Managed and analyzed large-scale medical records and healthcare transactional data for operations across the West Bank and Gaza.</li>
-                    <li>Conducted rigorous data cleaning and validation on healthcare datasets to ensure data integrity.</li>
-                    <li>Facilitated capacity building workshops and supported staff training on digital MEAL tools.</li>
-                </ul>
+                <div class="timeline-org">Birzeit University, Palestine</div>
+                <p style="color: var(--text-muted);"><strong>Key Modules:</strong> Python Programming, Database Management, Artificial Intelligence, Statistics and Probability.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="job">
-                <div class="job-header">
-                    <h3>Data Analyst</h3>
-                    <span class="date">05/2023 - 04/2024</span>
-                </div>
-                <div class="organization">Palestine Red Crescent Society | Ramallah, Palestine</div>
-                <ul>
-                    <li>Designed and implemented ETL processes to streamline patient data, reducing processing time by 50%.</li>
-                    <li>Utilized Docker to containerize data applications, ensuring consistent deployment environments.</li>
-                    <li>Performed advanced SQL queries for data extraction and transformation to support departmental decision-making.</li>
-                </ul>
+    <footer>
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Let's Connect</h2>
+            <div class="footer-info">
+                <span><i class="fas fa-map-marker-alt"></i> Turin, Italy</span>
+                <a href="mailto:mashq20.4.2@gmail.com"><i class="fas fa-envelope"></i> mashq20.4.2@gmail.com</a>
+                <span><i class="fas fa-phone"></i> +39 347 341 2181</span>
             </div>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            
-            <div class="education-item">
-                <div class="edu-header">
-                    <h3>MS in Artificial Intelligence for Biomedicine and Healthcare</h3>
-                    <span class="date">10/2025 - Current</span>
-                </div>
-                <div class="organization">University of Turin, Italy</div>
-                <p><strong>Key Modules:</strong> Machine Learning, Deep Learning, Neural Networks.</p>
-            </div>
-
-            <div class="education-item">
-                <div class="edu-header">
-                    <h3>BSc in Computer Science</h3>
-                    <span class="date">08/2018 - 09/2022</span>
-                </div>
-                <div class="organization">Birzeit University, Palestine</div>
-                <p><strong>Key Modules:</strong> Python Programming, Database Management, Artificial Intelligence, Statistics and Probability.</p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Project Experience</h2>
-            
-            <div class="project">
-                <div class="job-header">
-                    <h3>Plant Diseases Detection (Deep Learning)</h3>
-                    <span class="date">08/2023</span>
-                </div>
-                <p>Improved model accuracy from 98% to 99.8% using advanced data augmentation and preprocessing techniques.</p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Tools & Skills</h2>
-            <div class="skills-container">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">Jupyter Notebook</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Microsoft Azure</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">Deep Learning</span>
-            </div>
-            <p style="margin-top: 15px;"><strong>Languages:</strong> Arabic (Native), English (Fluent)</p>
-        </section>
-    </div>
+            <p style="color: #cbd5e1; font-size: 0.9rem; margin-top: 20px;">© 2026 Mohamed Qendah. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
-
 </html>
-
-
-
-
-
-
